@@ -2,7 +2,7 @@ name: Tests
 on: [push, pull_request]
 env:
   DEFAULT_COMPOSER_FLAGS: "--prefer-dist --no-interaction"
-  CC_TEST_REPORTER_ID: CODECLIMATE_REPORTER_ID
+  CC_TEST_REPORTER_ID: 20215c9faf0c3c9a1d26295d2d791dc07f1afafe39bde59d76626c9f53f3e9d0
 jobs:
   phpunit:
     name: PHP ${{ matrix.php }} on ${{ matrix.os }}

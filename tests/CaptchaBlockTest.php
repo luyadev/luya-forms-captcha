@@ -17,6 +17,10 @@ class CaptchaBlockTest extends PackageTestCase
         ]);
 
         $this->assertNotEmpty($this->block->frontend());
+        $this->assertNotEmpty($this->block->name());
+        $this->assertNotEmpty($this->block->admin());
+        $this->assertNotEmpty($this->block->icon());
+        $this->assertNotEmpty($this->block->blockGroup());
 
         $this->app->forms->form->end();
     }

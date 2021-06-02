@@ -5,6 +5,7 @@ namespace luya\forms\captcha;
 use Yii;
 use himiklab\yii2\recaptcha\ReCaptchaValidator3;
 use luya\cms\base\PhpBlock;
+use luya\forms\blockgroups\FormGroup;
 use luya\forms\FieldBlockTrait;
 
 class CaptchaBlock extends PhpBlock
@@ -26,6 +27,11 @@ class CaptchaBlock extends PhpBlock
         return 'android';
     }
 
+    public function blockGroup()
+    {
+        return FormGroup::class;
+    }
+
     public function frontend()
     {
         Yii::$app->forms->autoConfigureAttribute(
@@ -35,12 +41,12 @@ class CaptchaBlock extends PhpBlock
             false
         );
 
-        // this ensures the value is hidden in confirm and save actions, and also ensure the attribute
-        // value does not need to be validate again after the preview.
         Yii::$app->forms->model->invisibleAttribute($this->getVarValue($this->varAttribute));
 
+        // Use all possible options with ActiveField or use the HtmlHelper
         return Yii::$app->forms->form->field(Yii::$app->forms->model, $this->getVarValue($this->varAttribute))
             ->widget('himiklab\yii2\recaptcha\ReCaptcha3')
             ->label(false);
+
     }
 }

@@ -24,14 +24,16 @@ Run the import command afterwards:
 
 ## Configuration
 
-Ensure you have configured the [recpatcha library](https://github.com/himiklab/yii2-recaptcha-widget) in your config:
+Ensure you have configured the [himiklab recaptcha library](https://github.com/himiklab/yii2-recaptcha-widget) in your config:
 
 ```php
 'components' => [
     'reCaptcha' => [
         'class' => 'himiklab\yii2\recaptcha\ReCaptchaConfig',
-        'siteKeyV3' => 'your siteKey v3',
-        'secretV3' => 'your secret key v3',
+        'siteKeyV3' => '6Le8J8cUAAAAAJTmfB38oJsktces2UabzvgHiUzP',
+        'secretV3' => '6Le8J8cUAAAAAJRUYYApW17R4cSIL9R9-Zr9e8gY',
     ],
 ]
 ```
+
+> Create V3 [Secret and Key](https://www.google.com/recaptcha/)

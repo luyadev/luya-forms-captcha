@@ -1,26 +1,26 @@
 {
-	"name" : "VENDOR/NAME",
-	"description" : "",
-	"type" : "luya-extension",
-	"keywords" : ["luya"],
-	"license": "MIT",
-	"authors" : [
-		{
-			"name": "",
-			"email": ""
-		}
-	],
-	"require-dev" : {
-	    "luyadev/luya-testsuite" : "^2.0"
-	},
-	"autoload" : {
-		"psr-4" : {
-			"VENDOR\\NAME\\" : "src/"
-		}
-	},
-	"autoload-dev" : {
+    "name" : "luyadev/luya-forms-captcha",
+    "description" : "Captcha Block for LUYA Forms Module",
+    "type" : "luya-extension",
+    "keywords" : ["luya"],
+    "license": "MIT",
+    "authors" : [
+        {
+            "name": "Basil Suter",
+            "email": "git@nadar.io"
+        }
+    ],
+    "require-dev" : {
+        "luyadev/luya-testsuite" : "^2.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "luya\\forms\\captcha\\" : "src/"
+        }
+    },
+    "autoload-dev" : {
        "psr-4" : {
-           "VENDOR\\NAME\\tests\\" : "tests/"
+           "luya\\forms\\captcha\\tests\\" : "tests/"
        }
     },
     "config": {
@@ -28,10 +28,21 @@
             "enabled": false
         }
     },
+    "extra": {
+        "luya" : {
+            "blocks": [
+                "src/"
+            ]
+        }
+    },
     "repositories": [
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-    ]
+    ],
+    "require": {
+        "luyadev/luya-module-forms": "^1.4",
+        "himiklab/yii2-recaptcha-widget": "^2.1"
+    }
 }

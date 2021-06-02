@@ -22,6 +22,16 @@ Run the import command afterwards:
 ./luya import
 ```
 
-## Usage
+## Configuration
 
-*Usage description*
+Ensure you have configured the [recpatcha library](https://github.com/himiklab/yii2-recaptcha-widget) in your config:
+
+```php
+'components' => [
+    'reCaptcha' => [
+        'class' => 'himiklab\yii2\recaptcha\ReCaptchaConfig',
+        'siteKeyV3' => 'your siteKey v3',
+        'secretV3' => 'your secret key v3',
+    ],
+]
+```

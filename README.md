@@ -31,6 +31,7 @@ Ensure you have configured the [himiklab recaptcha library](https://github.com/h
 
 ```php
 'components' => [
+    //...
     'reCaptcha' => [
         'class' => 'himiklab\yii2\recaptcha\ReCaptchaConfig',
         'siteKeyV3' => 'SITE_KEY',

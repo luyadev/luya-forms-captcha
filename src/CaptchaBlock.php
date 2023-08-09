@@ -41,10 +41,15 @@ class CaptchaBlock extends PhpBlock
             false
         );
 
-        Yii::$app->forms->model->invisibleAttribute($this->getVarValue($this->varAttribute));
+        $varName = $this->getVarValue($this->varAttribute);
+        if (!$varName) {
+            return;
+        }
+        
+        Yii::$app->forms->model->invisibleAttribute($varName);
 
         // Use all possible options with ActiveField or use the HtmlHelper
-        return Yii::$app->forms->form->field(Yii::$app->forms->model, $this->getVarValue($this->varAttribute))
+        return Yii::$app->forms->form->field(Yii::$app->forms->model, $varName)
             ->widget('himiklab\yii2\recaptcha\ReCaptcha3')
             ->label(false);
 

@@ -26,6 +26,10 @@
     "config": {
         "fxp-asset": {
             "enabled": false
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "luyadev/luya-composer": true
         }
     },
     "extra": {
@@ -43,6 +47,6 @@
     ],
     "require": {
         "luyadev/luya-module-forms": "^1.4",
-        "himiklab/yii2-recaptcha-widget": "^2.1"
+        "luyadev/yii2-recaptcha-widget": "^1.0"
     }
 }

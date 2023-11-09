@@ -3,7 +3,7 @@
 namespace luya\forms\captcha;
 
 use Yii;
-use himiklab\yii2\recaptcha\ReCaptchaValidator3;
+use luyadev\recaptcha\ReCaptchaValidator3;
 use luya\cms\base\PhpBlock;
 use luya\forms\blockgroups\FormGroup;
 use luya\forms\FieldBlockTrait;
@@ -50,7 +50,7 @@ class CaptchaBlock extends PhpBlock
 
         // Use all possible options with ActiveField or use the HtmlHelper
         return Yii::$app->forms->form->field(Yii::$app->forms->model, $varName)
-            ->widget('himiklab\yii2\recaptcha\ReCaptcha3')
+            ->widget('luyadev\recaptcha\ReCaptcha3')
             ->label(false);
 
     }

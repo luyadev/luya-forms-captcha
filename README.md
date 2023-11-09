@@ -27,13 +27,13 @@ Run the import command afterwards:
 
 ## Configuration
 
-Ensure you have configured the [himiklab recaptcha library](https://github.com/himiklab/yii2-recaptcha-widget) in your config:
+Ensure you have configured the [himiklab(fork) recaptcha library](https://github.com/luyadev/yii2-recaptcha-widget) in your config:
 
 ```php
 'components' => [
     //...
     'reCaptcha' => [
-        'class' => 'himiklab\yii2\recaptcha\ReCaptchaConfig',
+        'class' => 'luyadev\recaptcha\ReCaptchaConfig',
         'siteKeyV3' => 'SITE_KEY',
         'secretV3' => 'SECRET_KEY',
     ],

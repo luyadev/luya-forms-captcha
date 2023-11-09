@@ -25,7 +25,7 @@ class PackageTestCase extends CmsBlockTestCase
             ],
             'components' => [
                 'reCaptcha' => [
-                    'class' => 'himiklab\yii2\recaptcha\ReCaptchaConfig',
+                    'class' => 'luyadev\recaptcha\ReCaptchaConfig',
                     'siteKeyV3' => 'your siteKey v3',
                     'secretV3' => 'your secret key v3',
                 ],
